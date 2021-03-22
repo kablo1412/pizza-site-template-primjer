@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color:#6C63FF;
+    height: 100vh;
+    color: #e8e8ed;
+    display: grid;
+    place-items: center;
+    font-family: 'Krona One',sans-serif;
+    position: relative;
+    animation: bg-animation 3s infinite;
+}
+
+@keyframes bg-animation {
+    0% 
+    {
+         background-color: rgb(125, 137, 177);
+    }
+    50%
+    { 
+        background-color: rgb(86, 86, 196); 
+    }
+    100% 
+    {
+         background-color: rgb(125, 137, 177);
+    }
+}
+.naslov {
+    text-align: center;
+    cursor: default;
+}
+
+.slikanaslov {
+    position: absolute;
+    bottom: 110px;
+    animation: trisestnula 2s infinite linear;
+    transform-box: top left;
+}
+@keyframes trisestnula {
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.naslov h1 {
+    font-size: 3.95em;
+}
+
+.slogan {
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+.broj {
+    padding-top: 5px;
+    font-size: .6em;
+    letter-spacing: 1px;
+}
+.nav {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    background: linear-gradient(45deg ,white,#6C63FF);
+}
+
+.navigacija {
+    position: absolute;
+    right: 200px;
+    transform: skewY(13deg);
+}
+
+.lista{
+    list-style-type: none;
+    font-family: 'Jura',sans-serif;
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
+li{
+    padding: 25px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    outline: none;
+    letter-spacing: 1.5px;
+}
+
+a:hover {
+    background: -webkit-linear-gradient(45deg,red,orange,yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+a::after {
+    content: "  \f818";
+    font-family: "Font Awesome 5 Free";
+}
+#pizza {
+    animation: pizzauoblaku 1.8s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes pizzauoblaku {
+    0%{
+        transform: rotate(2deg);
+    }
+    20%{
+        transform: rotate(20deg);
+    }
+    50%{
+        transform: rotate(60deg);
+    }
+    20%{
+        transform: rotate(20deg);
+    }
+    0%{
+        transform: rotate(2deg);
+    }
+}
+
+
+.footer {
+    background-color:#6C63FF;
+    text-align: center;
+    position: relative;
+}
+
+.fas {
+    font-size: 35px;
+    padding: 22px;
+    color: #e8e8ed;
+}
+
+.footer p {
+    padding-bottom: 32px;
+    color: #e8e8ed;
+    font-family: 'Jura', sans-serif;
+}
+
+.slikalokacije {
+    position: absolute;
+    bottom: 70px;
+    right: 90px;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width:1290px)
+{
+    .slikalokacije {
+        display: none;
+    }
+
+    .hodanje {
+        display: none;
+    }
+    a {
+        background: -webkit-linear-gradient(45deg,red,orange,yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        -webkit-text-stroke: .4px black;
+    }
+    
+    .nav {
+        background: #6C63FF;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .navigacija{
+        right: auto;
+        transform: none;
+    }
+    .slikanaslov {
+        position: absolute;
+        right: auto;
+        bottom: 110px;
+        animation: picarotacija 2s infinite linear;
+        transform-origin: center;
+    }
+    
+}
+
+
